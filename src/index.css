@@ -1,13 +1,80 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --light-cyan: rgb(204, 251, 254);
+    --jet: rgb(47, 45, 46);
+    --android-green: rgb(153, 194, 77);
+    --carrot-orange: rgb(241, 143, 1);
+    --teal-blue: #40798c;
+    --orange-red: #f26419;
+    --vivid-burgundy: #a4243b;
+    --catabwa: #582630;
+    --lavender-blue: #d4cdf4;
+    --teal-blue-light: #9dc5d2;
+    --green-pantone: #00AF54;
+    font-size: 16px;
+    color: var(--jet);
+    font-family: 'PT Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header, footer {
+    padding: 0.75rem;
+}
+
+header {
+    background-color: var(--teal-blue);
+    color: white;
+}
+
+.nombreMateria {
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 1.5rem;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+footer {
+    background-color: var(--teal-blue-light);
+}
+
+h1, h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--teal-blue);
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+a,
+a:visited,
+a:link {
+    color: var(--teal-blue);
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: var(--orange-red);
+}
+
+li {
+   margin: 1em 0; 
 }

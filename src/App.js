@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Materia from './components/Materia';
+import ListaParcialesMateria from "./components/ListaParcialesMateria";
+import Parcial from './components/Parcial';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path=":materia" element={<Materia />}>
+        <Route path="parciales" element={<ListaParcialesMateria/>}/>
+        <Route path="parcial/:id" element={<Parcial/>}></Route>
+      </Route>
+    </Routes>
   );
 }
 
