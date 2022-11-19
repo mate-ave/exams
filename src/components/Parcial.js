@@ -35,8 +35,10 @@ const Parcial = () => {
                     <li>{parsearEjercicio(parcial.ej_3.enunciado)}</li>
                     <li>{parsearEjercicio(parcial.ej_4.enunciado)}</li>
                 </ol>
-                <Link to="../parciales/">Ir a la lista de parciales</Link>
-                </> : null
+                <div className='linkLista'>
+                    <Link to="../parciales/">Ir a la lista de parciales</Link>
+                </div>
+            </> : null
             }
         </>
     );

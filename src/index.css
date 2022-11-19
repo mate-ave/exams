@@ -46,8 +46,12 @@ main {
     padding: 2rem;
 }
 
+.linkLista {
+    margin: 1em 0;
+}
+
 @media screen and (max-width: 600px) {
-    header, footer, h1 {
+    header, footer, h1, h2, .linkLista {
         text-align: center;
     }
     main {
