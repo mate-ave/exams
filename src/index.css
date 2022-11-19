@@ -46,6 +46,18 @@ main {
     padding: 2rem;
 }
 
+@media screen and (max-width: 600px) {
+    header, footer, h1 {
+        text-align: center;
+    }
+    main {
+        padding: 0.5rem;
+    }
+    ul { 
+        padding: 0 0 0 1.5rem;
+    }
+}
+
 footer {
     background-color: var(--teal-blue-light);
 }
@@ -77,4 +89,9 @@ a:hover {
 
 li {
    margin: 1em 0; 
+}
+
+li::marker {
+    color: var(--teal-blue);
+    font-weight: 700;
 }
