@@ -99,3 +99,7 @@ li::marker {
     color: var(--teal-blue);
     font-weight: 700;
 }
+
+.scrollable {
+    overflow-x: auto;
+}
