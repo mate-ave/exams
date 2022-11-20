@@ -6,7 +6,11 @@ const Parciales = ({ parciales }) =>
     <>
         {parciales.map((p, i) =>
             <React.Fragment key={p.id}>
-                <Link to={'../parcial/' + p.id}>&nbsp;letra <strong>{p.letra}</strong></Link>
+                <Link to={'../parcial/' + p.id}>
+                    {p.letra === 'r' ?
+                    <>&nbsp;<strong>recuperatorio</strong></>:
+                    <>&nbsp;letra <strong>{p.letra}</strong></>}
+                </Link>
                 {i === parciales.length - 1 ? <>.</> : <>,</>}
             </React.Fragment>
         )}
