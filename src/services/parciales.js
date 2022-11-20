@@ -15,7 +15,7 @@ class ParcialesDataService {
 const sortParciales = (p, q) => p.letra < q.letra ? -1 : p.letra > q.letra ? 1 : 0;
 
 const ordenarPorAnioYCuatri = parciales => {
-    const anios = [...new Set(parciales.map(p => p.anio))].sort();
+    const anios = [...new Set(parciales.map(p => p.anio))].sort().reverse();
     return anios.map(anio => ({
         anio: anio,
         cuat_1: parciales.filter(p => p.anio === anio && p.cuatrimestre === "1")
