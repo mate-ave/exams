@@ -28,7 +28,7 @@ const Parcial = () => {
         <>
             {loaded && materia === parcial.materia ? <>
                 <h1>{parcial.tipo_parcial === "1" ? "Primer" : "Segundo"} parcial</h1>
-                <h2>{parcial.cuatrimestre === "1" ? "1°" : "2°"} cuat. de {parcial.anio} - {parcial.letra} - tema {parcial.tema}</h2>
+                <h2>{parcial.cuatrimestre === "1" ? "1° cuat. de " : parcial.cuatrimestre === "2" ? "2° cuat. de " : "Curso de verano "}{parcial.anio} - {parcial.letra} - tema {parcial.tema}</h2>
                 <ol className='scrollable'>
                     <li>{parsearEjercicio(parcial.ej_1.enunciado)}</li>
                     <li>{parsearEjercicio(parcial.ej_2.enunciado)}</li>

@@ -35,11 +35,14 @@ const ListaParcialesMateria = () => {
                 <ul>
                     {parciales_1.map(a => <li key={a.anio}>{a.anio}
                         <ul>
-                            {a.cuat_1.length === 0 ? null : <li>1° cuatrimestre:
-                                <Parciales parciales={a.cuat_1} />
-                            </li>}
                             {a.cuat_2.length === 0 ? null : <li>2° cuatrimestre:
                                 <Parciales parciales={a.cuat_2} />
+                                </li>}
+                            {a.cuat_1.length === 0 ? null : <li>1° cuatrimestre:
+                                <Parciales parciales={a.cuat_1} />
+                                </li>}
+                            {a.verano.length === 0 ? null : <li>Curso de verano:
+                                <Parciales parciales={a.verano} />
                             </li>}
                         </ul>
                     </li>)}

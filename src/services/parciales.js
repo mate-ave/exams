@@ -12,7 +12,15 @@ class ParcialesDataService {
     }
 }
 
-const sortParciales = (p, q) => p.letra < q.letra ? -1 : p.letra > q.letra ? 1 : 0;
+const sortParciales = (p, q) => {
+    if (p.letra === "r") { 
+        return 1;
+    } else if (q.letra === "r") {
+        return -1;
+    } else {
+        return p.letra < q.letra ? -1 : p.letra > q.letra ? 1 : 0;
+    }
+};
 
 const ordenarPorAnioYCuatri = parciales => {
     const anios = [...new Set(parciales.map(p => p.anio))].sort().reverse();
@@ -22,6 +30,9 @@ const ordenarPorAnioYCuatri = parciales => {
             .map(p => ({ id: p.id, letra: p.letra }))
             .sort(sortParciales),
         cuat_2: parciales.filter(p => p.anio === anio && p.cuatrimestre === "2")
+            .map(p => ({ id: p.id, letra: p.letra }))
+            .sort(sortParciales),
+        verano: parciales.filter(p => p.anio === anio && p.cuatrimestre === "V")
             .map(p => ({ id: p.id, letra: p.letra }))
             .sort(sortParciales),
     }));
