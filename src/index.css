@@ -113,12 +113,19 @@ li::marker {
     border-radius: 0.3rem;
 }
 
-.loadingH2 {
+.loadingParcial, .loadingDetalles {
     background-color: var(--teal-blue-light);
-    width: 12rem;
     height: 1em;
     display: inline-block;
     border-radius: 0.3rem;
+}
+
+.loadingParcial {
+    width: 12rem;
+}
+
+.loadingDetalles {
+    width: 18rem;
 }
 
 @media screen and (max-width: 600px) {

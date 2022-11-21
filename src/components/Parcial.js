@@ -26,21 +26,41 @@ const Parcial = () => {
     }, [loaded]);
     return (
         <>
-            {loaded && materia === parcial.materia ? <>
-                <h1>{parcial.tipo_parcial === "1" ? "Primer" : "Segundo"} parcial</h1>
-                <h2>{parcial.cuatrimestre === "1" ? "1° cuat. de " : parcial.cuatrimestre === "2" ? "2° cuat. de " : "Curso de verano "}
-                    {`${parcial.anio} - ${parcial.letra === 'r' ? 'recup.' : parcial.letra} - tema ${parcial.tema}`}
-                </h2>
-                <ol className='scrollable'>
-                    <li>{parsearEjercicio(parcial.ej_1.enunciado)}</li>
-                    <li>{parsearEjercicio(parcial.ej_2.enunciado)}</li>
-                    <li>{parsearEjercicio(parcial.ej_3.enunciado)}</li>
-                    <li>{parsearEjercicio(parcial.ej_4.enunciado)}</li>
-                </ol>
-                <div className='linkLista'>
-                    <Link to="../parciales/">Ir a la lista de exámenes viejos</Link>
-                </div>
-            </> : null
+            {!loaded ?
+                <>
+                <h1><span className='loadingParcial'></span></h1>
+                <h2><span className='loadingDetalles'></span></h2>
+                    <ol>
+                        <li><span className="loadingLine"></span>
+                        <br/><span className="loadingLine"></span>
+                        </li>
+                        <li><span className="loadingLine"></span>
+                        <br/><span className="loadingLine"></span>
+                        </li>
+                        <li><span className="loadingLine"></span>
+                        <br/><span className="loadingLine"></span>
+                        </li>
+                        <li><span className="loadingLine"></span>
+                        <br/><span className="loadingLine"></span>
+                        </li>
+                    </ol>
+                </>
+                :
+                materia === parcial.materia ? <>
+                    <h1>{parcial.tipo_parcial === "1" ? "Primer" : "Segundo"} parcial</h1>
+                    <h2>{parcial.cuatrimestre === "1" ? "1° cuat. de " : parcial.cuatrimestre === "2" ? "2° cuat. de " : "Curso de verano "}
+                        {`${parcial.anio} - ${parcial.letra === 'r' ? 'recup.' : parcial.letra} - tema ${parcial.tema}`}
+                    </h2>
+                    <ol className='scrollable'>
+                        <li>{parsearEjercicio(parcial.ej_1.enunciado)}</li>
+                        <li>{parsearEjercicio(parcial.ej_2.enunciado)}</li>
+                        <li>{parsearEjercicio(parcial.ej_3.enunciado)}</li>
+                        <li>{parsearEjercicio(parcial.ej_4.enunciado)}</li>
+                    </ol>
+                    <div className='linkLista'>
+                        <Link to="../parciales/">Ir a la lista de exámenes viejos</Link>
+                    </div>
+                </> : null
             }
         </>
     );

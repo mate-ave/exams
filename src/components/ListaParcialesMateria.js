@@ -38,7 +38,7 @@ const ListaParcialesMateria = () => {
             <h1>Exámenes viejos</h1>
             {
                 !loaded ?
-                    <><h2><span className='loadingH2'></span></h2>
+                    <><h2><span className='loadingParcial'></span></h2>
                         <ul>
                             <li><span className="loadingYear"></span>
                                 <ul>
