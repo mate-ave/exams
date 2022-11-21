@@ -36,6 +36,11 @@ header {
     color: white;
 }
 
+.container {
+    max-width: 75%;
+    margin: 0 auto;
+}
+
 .nombreMateria {
     font-family: 'Love Ya Like A Sister', cursive;
     font-size: 1.5rem;
@@ -48,18 +53,6 @@ main {
 
 .linkLista {
     margin: 1em 0;
-}
-
-@media screen and (max-width: 600px) {
-    header, footer, h1, h2, .linkLista {
-        text-align: center;
-    }
-    main {
-        padding: 0.5rem;
-    }
-    ul { 
-        padding: 0 0 0 1.5rem;
-    }
 }
 
 footer {
@@ -102,4 +95,47 @@ li::marker {
 
 .scrollable {
     overflow-x: auto;
+}
+
+.loadingYear {
+    background-color: var(--teal-blue-light);
+    width: 3em;
+    height: 1em;
+    display: inline-block;
+    border-radius: 0.3rem;
+}
+
+.loadingLine {
+    background-color: var(--teal-blue-light);
+    width: 50%;
+    height: 1em;
+    display: inline-block;
+    border-radius: 0.3rem;
+}
+
+.loadingH2 {
+    background-color: var(--teal-blue-light);
+    width: 12rem;
+    height: 1em;
+    display: inline-block;
+    border-radius: 0.3rem;
+}
+
+@media screen and (max-width: 600px) {
+    header, footer, h1, h2, .linkLista {
+        text-align: center;
+    }
+    main {
+        padding: 0.5rem;
+    }
+    ul { 
+        padding: 0 0 0 1.5rem;
+    }
+    .container {
+        max-width: 100%;
+        margin: 0;
+    }
+    .loadingLine {
+        width: 100%;
+    }
 }

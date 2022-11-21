@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { Outlet, useParams } from "react-router-dom";
-import {nombreMateria} from "../utils/materias";
+import { nombreMateria } from "../utils/materias";
 
 const Materia = () => {
   const { materia } = useParams();
-  useEffect(() => {document.title = nombreMateria(materia)}, []);
+  useEffect(() => { document.title = nombreMateria(materia) }, []);
   return (<>
     <header>
       <nav>
@@ -14,8 +14,10 @@ const Materia = () => {
       </nav>
     </header>
     <main>
-      <noscript>You need to enable JavaScript to run this app.</noscript>
-      <Outlet/>
+      <div className="container">
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <Outlet />
+      </div>
     </main>
     <footer>
       <div>
