@@ -9,6 +9,7 @@
     --catabwa: #582630;
     --lavender-blue: #d4cdf4;
     --teal-blue-light: #9dc5d2;
+    --columbia-blue: #D2E4EA;
     --green-pantone: #00AF54;
     font-size: 16px;
     color: var(--jet);
@@ -97,8 +98,11 @@ li::marker {
     overflow-x: auto;
 }
 
+.loadingYear, .loadingLine, .loadingParcial, .loadingDetalles {
+    background-color: var(--columbia-blue);
+}
+
 .loadingYear {
-    background-color: var(--teal-blue-light);
     width: 3em;
     height: 1em;
     display: inline-block;
@@ -106,7 +110,6 @@ li::marker {
 }
 
 .loadingLine {
-    background-color: var(--teal-blue-light);
     width: 50%;
     height: 1em;
     display: inline-block;
@@ -114,7 +117,6 @@ li::marker {
 }
 
 .loadingParcial, .loadingDetalles {
-    background-color: var(--teal-blue-light);
     height: 1em;
     display: inline-block;
     border-radius: 0.3rem;
